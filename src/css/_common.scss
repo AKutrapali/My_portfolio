@@ -1,0 +1,81 @@
+$margin: 0 auto;
+$orange: #F57F17;
+$grey:rgba(38, 50, 56, 1);
+$blue:  #0091EA;
+
+%flex_line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex_column {
+  @extend %flex_line;
+  flex-direction: column;
+}
+
+@mixin flex_line () {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex_column () {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin button () {
+  all: unset;
+  background-color:$orange;
+  color: white;
+  border-radius: 15px;
+  border: 4px solid $blue;
+  text-align: center;
+  padding: 10px 45px;
+  cursor: pointer;
+  margin: 20px 10px;
+}
+
+@mixin button_hover () {
+  background-color: white;
+  color: $orange;
+  font-weight: bold;
+
+}
+
+@font-face {
+  font-family: "FuturaDemiCRegular";
+  src: url("../assets/fonts/FuturaDemiCRegular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FuturaBookC";
+  src: url("../assets/fonts/Futurabookc.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamSS";
+  src: url("../assets/fonts/GothamSSmNarrowLight.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;  
+}
+
+@media screen and (max-width: 530px) {
+ 
+}

@@ -1,1 +1,1 @@
-# webpack-boilerplate (test)
+# webpack-boilerplate (test2)

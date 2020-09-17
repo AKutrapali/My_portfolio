@@ -1,400 +1,59 @@
-body {
-  width: 100%;
-  background-color:#B0BEC5;
-  margin: 0 auto;
-  color: black;
-}
-
-.wrapper {
-  max-width: 1050px;
-  margin: 0 auto;
-  background-color:white;
-  font-size: 22px;
-  font-family: "GothamSS";
-  border: 2px solid black;
-  header {
-    background-image: url("./../assets/images/code_phone.png");
-    background-size: cover;
-    width: 100%;
-    .container {
-      background-color:rgba(38, 50, 56, 0.7);
-      color:white;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 3% 0;
-      border-bottom: 4px solid $blue;
-      max-width: 1280px;
-      margin: 0 auto;
-      font-size: 25px;
-      line-height: 25px;
-      .logo {
-        position: absolute;
-        top: 4%;
-        left: 4%;
-        display: flex;
-        align-items: inherit;
-        .text_orange {
-          color: $orange;
-        }
-        p {
-          display: flex;
-          font-weight: bold;
-          margin: auto 4px;
-        }
+main {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    .popular_goods {
+      .title {
+        font-size: 35px;
+        font-weight: 700;
+        margin: 30px;
       }   
-      .avatar {
-        border-radius: 150px;
-        border: 4px solid $blue;
-        overflow: hidden;
-        margin: 35px;
-        img {
-          width: 300px;
-          height: 300px;
-        }
-      }
-      .name_contacts {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        h1 {
-          font-family: "FuturaBookC";
-          font-size: 37px;
-          line-height: 30px;
-          font-weight: bold;
-          text-transform: uppercase;
-        }
-        .specialty {
-          display: flex;
-          .text_orange {
-            color: $orange;
-            font-weight: bold;
-          }
-          p {
-            display: flex;
-          }
-        }   
-      }
     }
   }
-  main {
+  .carousel {
+    @extend %flex_line;
     width: 100%;
-    .education_dark {
-      background-color: $grey;
-      color: white;
-    }
-    .education, .education_dark {
-      border-bottom:4px solid $blue;
-      padding-bottom: 20px;
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: 0 20px;
-        .title {
-          color: $orange;
-          font-size: 32px;
-          p {
-            padding: 56px 20px 15px 20px;
-            margin-block-start: 0em;
-            font-weight: bold;
-            border-bottom:4px solid $blue;
-          }
-        }
-        .content {
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          width: 100%;
-          p {
-            text-align: start;
-          }
-          ul {
-            @include flex-column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            li {
-              margin: 13px 10px;
-              text-align: start;
-            }
-          }
-          .certificate_RSS {
-            width: 98%;
-            text-align: center;
-            img {
-              width: 90%;
-              border-radius: 15px;
-              border: 4px solid $blue;
-            }
-          }
-          a {
-           all: unset;
-           width: 100%;
-          }
-        }
-      }
-    }
-    .project {
-      border-bottom:4px solid $blue;
-      background-color: $grey;
-      color: white;
-      .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: 0 20px;
-        .title {
-          color: $orange;
-          font-size: 32px;
-          z-index: 102;
-          p {
-            padding: 56px 20px 15px 20px;
-            margin-block-start: 0em;
-            font-weight: bold;
-            border-bottom:4px solid $blue;
-          }
-        }
-        .carousel_container {
-          position: relative;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          justify-content: center;
-          width: -webkit-fill-available;
-          .carousel_left, .carousel_right {
-            position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
-            width: 33px;
-            height: 58px;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .carousel_left_img, .carousel_right_img {
-              margin: auto 0;
-            }
-          }
-          .carousel_left {
-            left: 0%;
-            display: none;
-          }
-          .carousel_right {
-            right: 0;
-          }
-          .carousel_left:hover {         
-            color:$blue;
-          }
-          .carousel_right:hover {           
-            color:$blue;
-          }
-          .main_container {
-            position: relative;
-            width: 94%;
-            overflow: hidden;
-            .carousel {
-              position: relative;
-              left: 0%;
-              display: flex;
-              justify-content: space-between;
-              align-items: flex-start;
-              justify-content: flex-start;
-              .carousel_item {
-                transition: all ease 1s;
-                flex: 1 0 98%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                .item_title {
-                  font-size: 32px;
-                  font-weight: bold;
-                  padding-bottom: 20px;
-                }
-                .item_content {
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between;
-                  align-items: center;
-                  .link_button_container {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 20%;
-                    margin: 0 10px;
-                    a {
-                      width: 100%;
-                      .button {
-                        width: 96%;
-                        margin: 20px 0;
-                        padding: 10px 0;
-                      }
-                    }
-                  }
-                  .carousel_images {
-                    position: relative;
-                    padding: 15px 4%;
-                    cursor: pointer;
-                    width: 70%;
-                    a {
-                      width: 100%;
-                      img {
-                        width: 100%;
-                        border:4px solid $blue;
-                        border-radius: 15px;
-                      }
-                    }
-                  }
-                }
-                .carousel_text {
-                  display: block;
-                  width: 80%;
-                  padding-bottom: 20px;
-                  .button {
-                    width: 200px;
-                  }           
-                }
-              }
-            }          
-            #carousel_button {
-              display: none;
-            }
-          }        
-        }
-      }
-    }
   }
-}
-#but_mob {
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  background-color: 1;
-}
-.button {
-  @include button;
-}
-.button:hover {
-  @include button_hover;
-}
-a {
-  all: unset;
-}
-.text_orange {
-  color: $orange;
-  font-weight: bold;
-}
-p {
-  margin: 0.5em 0;
-  line-height: 1.5em;
-}
-
-
-@media screen and (max-width: 800px) {
-  .wrapper {
-    font-size: 25px;
-  }
-  .wrapper main .project .container .carousel_container .main_container .carousel .carousel_item {
-      .item_title {
-        font-size: 32px;
-      }
-     .item_content {
-      flex-direction: column;
-      width: unset;
-      .carousel_text {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .carousel_images {
-        width: 80%;
-      }
-      .link_button_container {
-        flex-direction: row;
-        width: 80%;
-        a {
-          text-align: center;
-          .button {
-          width: 80%;
-          }
-        }
+  .card {
+    width: 23%;
+    font-family: OpenSans;
+    font-style: normal;
+    font-weight: bold;
+    @extend %flex_column;
+    border: unset;
+    a {
+      width: 100%;
+      margin-top: -60px;
+      padding-top: 60px;
+      border:1px solid white
+    }
+    .icons{
+      @extend %flex_line;
+      margin: 4px;
+      width: 100%;
+      justify-content: space-evenly;
+      .btn {
+        border: 1px solid white;
+        z-index: 101;    
       }
     }
-  }
-}
-
-@media screen and (max-width: 530px) {
-  .wrapper {
-    font-size: 23px;
-  }
-  .wrapper header .container {
-    .logo {
-      display: none;
+    .image img {
+      width: 100%;
     }
-    .name_contacts h1 {
-      font-size: 33px;
-    }
-    .name_contacts p {
-      font-size: 30px;
-    }
-    .avatar{
-      margin: 35px 0;
-      border-radius: 0;
+    .rating {
+      @extend %flex_line;
+      justify-content: center;
       img {
-      width: 260px;
-      height: 260px;
+        width: 100px;
       }
+    } 
+    .cost_ownership, .prices {
+      color: $green;
+      margin: 5px;
     }
-  }
-  .wrapper main .education .container .title p, .wrapper main .education_dark .container .title p, .wrapper main .project .container .title {
-    font-size: 27px;
-    padding: 35px 20px 15px 20px;
-  }
-  .wrapper main .education .container .content ul li {
-    margin: 10px;
-  }
-  .wrapper main .project .container .carousel_container .carousel_left, .wrapper main .project .container .carousel_container .carousel_right {
-    display: none;
-  }
-  .button {
-    border-radius: 0;
-  }
-  .wrapper main .education .container .content .certificate_RSS img {
-    border-radius: 0;
-  }
-  .wrapper main .project .container .carousel_container .main_container .carousel .carousel_item .item_content .carousel_images a img {
-    border-radius: 0;
-  }
-  .wrapper main .project .container .carousel_container .main_container .carousel .carousel_item .item_title {
-    font-size: 27px;
-    text-align: center;
-    width: 90%;
-  }
-  .wrapper main .project .container .carousel_container .main_container .carousel .carousel_item .item_content .carousel_text .button {
-    width: 160px;
-  }
-  .wrapper main .project .container .carousel_container .main_container .carousel .carousel_item .item_content .carousel_images {
-    width: 92%;
-    padding: 4%;
-}
-}
-@media screen and (max-width: 319px) {
-  body {
-    background-color: $grey;
-  }
-  .wrapper{
-    display: none;
+    .text {
+      margin: 5px auto;
+    } 
   }
 }

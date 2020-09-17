@@ -1,7 +1,12 @@
 $margin: 0 auto;
-$orange: #F57F17;
-$grey:rgba(38, 50, 56, 1);
-$blue:  #0091EA;
+$blue: #101396;
+$blue_dark:#252770;
+$green: #15D42E;
+$yellow: #FBFF38;
+
+button, input, optgroup, select, textarea {
+  font-family: unset;
+}
 
 %flex_line {
   display: flex;
@@ -27,47 +32,17 @@ $blue:  #0091EA;
   align-items: center;
 }
 
-@mixin button () {
-  all: unset;
-  background-color:$orange;
-  color: white;
-  border-radius: 15px;
-  border: 4px solid $blue;
-  text-align: center;
-  padding: 10px 45px;
-  cursor: pointer;
-  margin: 20px 10px;
-}
-
-@mixin button_hover () {
-  background-color: white;
-  color: $orange;
-  font-weight: bold;
-
-}
-
 @font-face {
-  font-family: "FuturaDemiCRegular";
-  src: url("../assets/fonts/FuturaDemiCRegular.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "FuturaBookC";
-  src: url("../assets/fonts/Futurabookc.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "GothamSS";
-  src: url("../assets/fonts/GothamSSmNarrowLight.otf");
+  font-family: 'OpenSans';
+  src: url('../assets/fonts/OpenSans-Reg.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 body,
 ul,
-li {
+li,
+p {
   margin: 0;
   padding: 0;
 }
@@ -76,6 +51,22 @@ li {
   list-style: none;  
 }
 
-@media screen and (max-width: 530px) {
- 
+.wrapper {
+  margin: $margin;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  width: 100%;
+  background-color:white;
+  margin: 0 auto;
+  color: black;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color:white;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
 }
